@@ -3,25 +3,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <!-- Контейнер для ImageView с градиентным оверлеем -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="561dp"
+        android:layout_height="0dp"
         android:layout_weight="1">
-
+        
         <ImageView
             android:id="@+id/imageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:background="@drawable/chucimg"
-            android:contentDescription="Фоновое изображение"
-            android:scaleType="centerCrop" />
-
+            android:scaleType="centerCrop"
+            android:src="@drawable/pupu"
+            android:contentDescription="Фоновое изображение" />
+            
         <!-- Градиентный оверлей для плавного перехода -->
         <View
             android:layout_width="match_parent"
@@ -32,47 +31,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="32dp"
-        android:background="#CD8649"
-        android:gravity="center"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="48dp"
+        android:padding="24dp"
+        android:background="#CD8649">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать в приложение"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="48dp"
+            android:textStyle="bold"
+            android:gravity="center" />
 
         <EditText
             android:id="@+id/login"
-            android:layout_width="280dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="20dp"
             android:hint="Логин"
-            android:minHeight="48dp"
-            android:padding="12dp"
+            android:textColorHint="@color/black"
             android:textColor="@color/black"
-            android:textColorHint="@color/black" />
+            android:minHeight="56dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="16dp"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="280dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:background="@android:drawable/edit_text"
-            android:hint="Пароль"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            android:padding="12dp"
+            android:layout_marginBottom="32dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black" />
+            android:hint="Пароль"
+            android:textColorHint="@color/black"
+            android:minHeight="56dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="16dp"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/logIn"
-            android:layout_width="200dp"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#698DB8"
             android:text="Войти"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
 </LinearLayout>
+

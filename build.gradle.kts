@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.chuc"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = 23
+        targetSdk = 28
         versionCode = 1
         versionName = "1.0"
 
@@ -36,7 +36,12 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.glide)
+    implementation(libs.compiler)
+    implementation(libs.circleimageview)
+    implementation(libs.jsoup)
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
